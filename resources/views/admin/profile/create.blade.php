@@ -3,7 +3,7 @@
 @section('content')
 <div class='content'>
     <div class='row'>
-        <div class='col-md-08 mx-auto'>
+        <div class='col-md-8 mx-auto'>
             <h2>プロフィール作成</h2>
             <form action="{{ action('Admin\ProfileController@create')}}" method='post' enctype="multipart/form-data">
                 
