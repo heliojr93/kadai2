@@ -53,7 +53,7 @@ class ProfileController extends Controller
         // Validationをかける
       $this->validate($request, Profiles::$rules);
       // News Modelからデータを取得する
-      $news = Profiles::find($request->id);
+      $profiles = Profiles::find($request->id);
       // 送信されてきたフォームデータを格納する
       $profiles_form = $request->all();
       unset($profiles_form['_token']);
