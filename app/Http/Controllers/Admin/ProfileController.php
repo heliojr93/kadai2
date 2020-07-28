@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Profiles;
+use App\Historico;
+use Carbon\Carbon;
 
 class ProfileController extends Controller
 {
@@ -60,6 +62,12 @@ class ProfileController extends Controller
 
       // 該当するデータを上書きして保存する
       $profiles->fill($profiles_form)->save();
+      // 以下を追記
+      $historico = new Historico;
+      $historico->profile_id = $profiles->id;
+      $historico->edited_at = Carbon::now();
+      $historico->save();
+
 
         return redirect('admin/profile');
     }

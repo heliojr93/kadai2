@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 //以下を追加
 use App\News;
 // 以下を追記
+use App\History;
 use Carbon\Carbon;
 
 class NewsController extends Controller

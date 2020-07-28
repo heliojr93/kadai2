@@ -13,6 +13,9 @@ class Profiles extends Model
         'gender'=>'required',
         'hobby'=>'required'
          );
+    public function historicos(){
+        return $this->hasMany('App\Historico');
+    }
         
     
 }
