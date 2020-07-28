@@ -64,7 +64,7 @@ class ProfileController extends Controller
       $profiles->fill($profiles_form)->save();
       // 以下を追記
       $historico = new Historico;
-      $historico->profile_id = $profiles->id;
+      $historico->profiles_id = $profiles->id;
       $historico->edited_at = Carbon::now();
       $historico->save();
 

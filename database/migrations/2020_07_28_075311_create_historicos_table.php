@@ -15,7 +15,7 @@ class CreateHistoricosTable extends Migration
     {
         Schema::create('historicos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('profile_id');
+            $table->integer('profiles_id');
             $table->string('edited_at');
             $table->timestamps();
         });
