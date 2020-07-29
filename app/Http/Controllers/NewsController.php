@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\HTML;
 use App\News;
 
 class NewsController extends Controller
@@ -19,6 +20,6 @@ class NewsController extends Controller
 
         // news/index.blade.php ファイルを渡している
         // また View テンプレートに headline、 posts、という変数を渡している
-        return view('news.index', ['headline' => $headline, 'posts' => $posts]);
+        return view('news.index ', ['headline' => $headline, 'posts' => $posts]);
     }
 }
